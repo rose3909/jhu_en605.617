@@ -1,0 +1,12 @@
+Results Discussion
+
+GPU performance improved as the number of launched threads and available blocks increased. 
+With 512 threads in two blocks, the branchless GPU kernel took 9.103 ms and was slower than the CPU’s 5.943 ms 
+because the GPU was substantially underutilized. This portion took me awhile to realize and I spent quite a bit of time
+trying to figure it out!
+At 2,048 threads, the branchless GPU time decreased to 2.445 ms, approximately 2.85 times faster than the corresponding 
+CPU time of 6.957 ms. Branching increased GPU execution time by approximately 9.5% in the 1,024-thread configuration 
+and 10.8% in the 2,048-thread configuration, which is what I expected to see. 
+
+Also, one thing I found was that CPU measurements varied between runs even though even though the CPU algorithm processed 
+the same 8,388,608 values each time and was unaffected by the CUDA launch configuration.
