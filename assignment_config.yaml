@@ -1,17 +1,7 @@
-# Course assignment_build_execution configuration format.
-# Place this file at the Git repository root on branch main.
-folder: src
+folder: "Module 5"
 
-# One build with no arguments. An empty outer list would skip building.
-build:
-  - []
+build: {}
 
-# Independent runs: totalThreads, blockSize, repeats, output CSV.
+# Run run.sh which executes all seven configurations
 run:
-  - [65536, 64, 100, evidence/results_65536_64.csv]
-  - [65536, 256, 100, evidence/results_65536_256.csv]
-  - [1048576, 128, 100, evidence/results_1048576_128.csv]
-  - [1048576, 256, 100, evidence/results_1048576_256.csv]
-  - [1048576, 512, 100, evidence/results_1048576_512.csv]
-  - [100003, 256, 100, evidence/results_100003_256.csv]
-  - [17, 64, 100, evidence/results_17_64.csv]
+  - []
