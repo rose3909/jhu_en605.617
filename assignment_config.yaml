@@ -1,5 +1,0 @@
-# DRAFT: compare with the existing root assignment_config.yaml before replacing it.
-# This matches the folder/build/run pattern used for the previous module.
-folder: Module 6
-build: {}
-run: run.sh
